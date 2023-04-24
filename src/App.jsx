@@ -19,7 +19,9 @@ import youtube from "./assets/images/youtube.png";
 
 import "./App.css";
 
+
 function App() {
+  console.log(apiUrl)
   return (
     <main className="w-full bg-white">
       <header
