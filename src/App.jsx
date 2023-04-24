@@ -2,40 +2,24 @@ import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import headerBackground from "./assets/images/header-home.png";
-import menuHamburguesa from "./assets/images/menu-hamburguesa.png";
-import logoMinga from "./assets/images/logo-minga.png";
 import flechaIzquierda from "./assets/images/arrow-izquierda.png";
 import flechaDerecha from "./assets/images/arrow-derecha.png";
 import nami from "./assets/images/nami-png-home.png";
 import portada from "./assets/images/one-piece-portada-main.png";
-import bakugo from "./assets/images/bakugo-footer.png";
-import logoMinga2 from "./assets/images/logo-minga-2.png";
-import corazoncito from "./assets/images/union.png";
-import facebook from "./assets/images/facebook.png";
-import twitter from "./assets/images/twitter.png";
-import vimeo from "./assets/images/vimeo.png";
-import youtube from "./assets/images/youtube.png";
-
-
+import Footer from './components/Footer'
+import Navbar from './components/Navbar'
 import "./App.css";
 
 
 function App() {
-  console.log(apiUrl)
+
   return (
     <main className="w-full bg-white">
       <header
         className="w-full h-96 bg-cover bg-no-repeat object-cover "
         style={{ backgroundImage: `url(${headerBackground})` }}
       >
-        <nav className="flex justify-between items-center pt-6 px-8">
-          <img
-            src={menuHamburguesa}
-            className="object-cover  h-10"
-            alt="hamburguesa"
-          />
-          <img src={logoMinga} className="object-cover  h-8" />
-        </nav>
+        <Navbar/>
         <div className="flex flex-col py-20 pl-10">
           <h1 className="text-white font-bold text-5xl">
             For the love of manga
@@ -71,32 +55,7 @@ function App() {
           <img src={flechaDerecha} className="w-6 h-6" />
         </div>
       </div>
-      <footer className="w-full">
-        <img
-          src={bakugo}
-          className="w-full h-48 object-cover object-top rounded-[0_0_48%_52%/_0%_0%_100%_100%]"
-        />
-        <div className="w-full h-48 bg-white flex justify-center items-center ">
-          <div className="w-3/4 bg-white flex justify-between items-center pb-4 border-b border-gray-300">
-            <div className="w-1/6 flex items-center justify-around">
-              <a>Home</a>
-              <a>Mangas</a>
-            </div>
-            <img src={logoMinga2} className="w-1/6" />
-            <div className="w-1/6">
-              <div className="flex justify-between py-3 ">
-                <img src={facebook} className="w-[15%] object-contain" />
-                <img src={twitter} className="w-[15%] object-contain" />
-                <img src={vimeo} className="w-[15%] object-contain" />
-                <img src={youtube} className="w-[15%] object-contain" />
-              </div>
-              <button className="text-white px-14 py-1  bg-orange-500 rounded">
-                Donate <span src={corazoncito}></span>
-              </button>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <Footer/>
     </main>
   );
 }
